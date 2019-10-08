@@ -22,4 +22,13 @@ public class Library {
     public int getCapacity(){
         return this.capacity;
     }
+
+    public void addBook(Book book) {
+        Book stock[];
+        for (Book title : this.stock) {
+            if (Book stock <= capacity){
+                this.stock(book)
+            }
+        }
+    }
 }

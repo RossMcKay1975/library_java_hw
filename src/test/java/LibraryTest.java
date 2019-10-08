@@ -10,8 +10,8 @@ public class LibraryTest {
 
     @Before
     public void before(){
-        library = new Library(100);
-//        book = new Book();
+        library = new Library(6);
+        book = new Book();
     }
 
     @Test
@@ -24,10 +24,21 @@ public class LibraryTest {
 //        library.addToStock(book);
 //        assertEquals(1, library.bookCount());
 //    }
+    @Test
+    public void checkIfAtMaxCapacity(){
+        library.addtoStock(book);
+        library.addtoStock(book);
+        library.addtoStock(book);
+        library.addtoStock(book);
+        library.addtoStock(book);
+        library.addtoStock(book);
+        assertEquals(0, library.bookCount());
+
+    }
+
 
     @Test
     public void checkLibraryHasCapacity(){
-        assertEquals(100, library.getCapacity());
-
+        assertEquals(6, library.getCapacity());
     }
 }
